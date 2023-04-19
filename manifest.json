@@ -1,0 +1,24 @@
+{
+  "manifest_version": 2,
+  "name": "Synonymous",
+  "version": "1.0",
+  "description": "Tells the meaning of a word",
+  "icons": {
+    "48": "icons/border-48.png"
+  },
+  "permissions": [
+    "https://api.dictionaryapi.dev/api/v2/entries/en/*",
+    "activeTab",
+    "webRequest"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "synonymous.js"
+      ]
+    }
+  ]
+}

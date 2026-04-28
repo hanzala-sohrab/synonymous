@@ -152,9 +152,9 @@ const positionNearSelection = (el) => {
   const range = sel.getRangeAt(0);
   const rect = range.getBoundingClientRect();
 
-  // Place below the selection, horizontally centered
+  // Place at the bottom-right of the selection
   const top = rect.bottom + window.scrollY + 6;
-  const left = Math.max(4, rect.left + window.scrollX + rect.width / 2 - el.offsetWidth / 2);
+  const left = Math.max(4, rect.right + window.scrollX + 4);
 
   el.style.top = `${top}px`;
   el.style.left = `${left}px`;
